@@ -1,0 +1,146 @@
+/* עיצוב כללי עבור form-container */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f5f8;
+  /* צבע רקע בהיר ורגוע */
+  padding: 20px;
+  gap: 40px;
+  /* רווח בין התמונה לטופס */
+}
+
+/* עיצוב לתמונה בצד שמאל */
+.image-container {
+  flex: 1;
+  max-width: 60%;
+  /* הגדלתי את התמונה שתתפוס יותר מקום */
+  padding-right: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 700px;
+  /* הגדלת גודל התמונה משמעותית */
+  height: auto;
+  border-radius: 12px;
+  /* רדיוס לפינות התמונה */
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.2);
+  /* צללית מרשימה לתמונה */
+}
+
+/* עיצוב עבור הטופס בצד ימין */
+.form-add {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 50px 70px;
+  /* הגדלתי את הריווח הפנימי */
+  border-radius: 30px;
+  /* הגדלת רדיוס הפינות */
+  box-shadow: 4px 10px 40px rgba(0, 0, 0, 0.1);
+  /* צללית מרשימה לטופס */
+  max-width: 800px;
+  /* הגדלתי את רוחב הטופס */
+  width: 100%;
+  height: 600px;
+  /* גובה הטופס */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  direction: rtl;
+}
+
+/* עיצוב עבור כותרות של שדות */
+.form-add label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  /* הגדלתי את הריווח בין התווית לשדה */
+  text-align: right;
+  color: #444444;
+  margin-top: 20px;
+  /* רווח גדול לפני השדה */
+}
+
+/* עיצוב עבור השדות עצמם */
+.form-add input[type="text"],
+.form-add input[type="number"] {
+  width: 100%;
+  padding: 18px 25px;
+  /* הגדלת הריווח הפנימי בשדות */
+  margin-bottom: 25px;
+  /* הגדלת ריווח בין השדות */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #555555;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+/* שינוי צבע גבול השדה בהפוקוס */
+.form-add input[type="text"]:focus,
+.form-add input[type="number"]:focus {
+  border-color: #3e1b9e;
+  /* גבול סגול בהפוקוס */
+  outline: none;
+}
+
+/* הודעות שגיאה */
+.error-message {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 12px 25px;
+  /* הגדלת ריווח פנימי בהודעות שגיאה */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-align: right;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* עיצוב עבור כפתור שליחה */
+.form-add button {
+  background-color: #3e1b9e;
+  color: white;
+  padding: 18px 40px;
+  font-size: 20px;
+  border-radius: 12px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  direction: ltr;
+}
+
+/* שינוי צבע הכפתור בהעכבר */
+.form-add button:hover {
+  background-color: #2d1a77;
+  /* צבע כהה יותר בהעכבר */
+  transform: scale(1.05);
+  /* הגדלה קלה של הכפתור */
+}
+
+/* סגנון עבור אייקון ב-Button */
+button .MuiButton-endIcon {
+  margin-left: 10px;
+  font-size: 22px;
+}
+
+/* כללי לגוף האתר */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f1f5f8;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

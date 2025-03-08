@@ -1,0 +1,105 @@
+/* עיצוב הכללי של רשימת התרומות */
+.donations-list {
+  display: grid;
+  /* שימוש ב-Grid */
+  grid-template-columns: repeat(3, 1fr);
+  /* שלוש עמודות */
+  gap: 20px;
+  /* רווחים בין הריבועים */
+  padding: 20px;
+  /* ריפוד סביב כל הרשימה */
+  direction: rtl;
+  margin-right: 10%;
+}
+
+/* עיצוב עבור כל תרומה */
+.donation-item {
+  position: relative;
+  /* נדרש כדי שנוכל להשתמש ב-Aspect Ratio */
+  width: 100%;
+  /* הרוחב יתפוס את כל הגודל של תא ה-Grid */
+  aspect-ratio: 1;
+  /* יחס גובה ורוחב 1:1, כלומר ריבוע */
+  border: 4px solid rgb(26, 26, 86);
+  /* מסגרת כחולה */
+  border-radius: 16px;
+  /* קצוות מעוגלים יותר */
+  transition: all 0.3s ease;
+  /* אנימציה רכה לשינויים */
+  cursor: pointer;
+  /* מצביע שיקל על המשתמש לדעת שמדובר באלמנט שניתן לבצע איתו אינטראקציה */
+  overflow: hidden;
+  /* אם התוכן חורג מתוך הריבוע, הוא יוסתר */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* למרכז את התוכן בתוך הריבוע */
+  height: 300px;
+  /* גובה קבוע */
+  max-width: 340px;
+  /* רוחב קבוע */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* הצללה עדינה */
+}
+
+/* כאשר העכבר עובר מעל הריבוע */
+.donation-item:hover {
+  background-color: #d9deee;
+  /* רקע כחול כהה */
+  transform: scale(1.1);
+  /* הגדלת הריבוע */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  /* הצללה מודגשת יותר כשעוברים מעל */
+}
+
+/* כל הטקסטים בתוך הריבוע יהיו לבנים כאשר העכבר עובר מעל */
+.donation-item:hover h1,
+.donation-item:hover .sum,
+.donation-item:hover .dedication,
+.donation-item:hover .time {
+  color: white;
+  /* צבע טקסט לבן */
+}
+
+/* עיצוב עבור שם התרומה */
+.donation-item h1 {
+  margin: 10px 0;
+  font-size: 30px;
+  /* הגדלת גודל הפונט */
+  font-weight: bold;
+  color: #333;
+  /* צבע טקסט כהה ברירת מחדל */
+  line-height: 1.2;
+  overflow: hidden;
+  /* מוודא שאין טקסט יוצא */
+  text-overflow: ellipsis;
+  /* אם הטקסט ארוך מדי הוא יקוצר */
+}
+
+/* עיצוב עבור הסכום */
+.donation-item .sum {
+  color: #007BFF;
+  /* צבע כחול כהה עבור הסכום */
+  font-size: 24px;
+  /* הגדלת גודל הפונט */
+  font-weight: bold;
+}
+
+/* עיצוב עבור ההקדשה */
+.donation-item .dedication {
+  font-style: italic;
+  color: #666;
+  /* צבע אפור כהה */
+  font-size: 14px;
+  /* הגדלת גודל הפונט */
+}
+
+/* עיצוב עבור הזמן */
+.donation-item .time {
+  font-size: 14px;
+  /* הגדלת גודל הפונט */
+  color: #888;
+  /* צבע אפור בהיר */
+}

@@ -1,0 +1,90 @@
+/* עיצוב ה-navbar */
+.navbar {
+  position: fixed;
+  /* דבק למעלה */
+  top: 0;
+  /* מיקום בגבול העליון */
+  left: 0;
+  /* מיקום בגבול השמאלי */
+  width: 100%;
+  /* 100% רוחב של המסך */
+  background-color: #003366;
+  /* צבע רקע כחול כהה */
+  color: white;
+  /* צבע טקסט לבן */
+  padding: 10px 20px;
+  /* רווחים פנימיים */
+  border-bottom: 2px solid #000;
+  /* פס דק תחתון שחור */
+  z-index: 1000;
+  /* לוודא שהוא יהיה מעל כל תוכן אחר */
+  display: flex;
+  /* עבור אלמנטים במבנה של flex */
+  justify-content: flex-start;
+  /* כל האלמנטים יהיו ממויינים מצד שמאל */
+  align-items: center;
+  /* למרכז את האלמנטים אנכית */
+  height: 70px;
+
+}
+.link:hover{
+  background-color: #f4efef;
+  border-radius: 15px;
+}
+
+/* עיצוב עבור ה-ul */
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  /* נשתמש ב-flex כדי להציג את הלינקים וה-select בשורה */
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  /* למרכז את הלינקים וה-select במאונך */
+}
+
+.navbar ul li {
+  margin-left: 20px;
+  /* רווח בין האלמנטים */
+}
+
+.navbar a {
+  font-size: x-large;
+  color: rgb(187, 187, 173);
+  /* צבע הלינקים לבן */
+  font-weight: bold;
+}
+
+.navbar select {
+  background-color: #005a8c;
+  /* רקע כחול כהה עבור הבחירה */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: 20px;
+  /* רווח בין ה-select לשאר הלינקים */
+}
+
+.navbar select:focus {
+  outline: none;
+  /* לבטל את המסגרת כשיש פוקוס */
+}
+
+/* עיצוב לתמונת הלוגו */
+.navbar .logo {
+  position: absolute;
+  /* מיקום מוחלט */
+  right: 30px;
+  /* 20px מרווח מצד ימין */
+  top: 50%;
+  /* ממקם באמצע מבחינה אנכית */
+  transform: translateY(-50%);
+  /* מיישר את הלוגו בצורה מדויקת */
+  height: 80px;
+  /* גובה הלוגו */
+  width: 120px;
+  /* רוחב אוטומטי לפי פרופורציות */
+}
